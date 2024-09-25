@@ -8,7 +8,7 @@ public class TimerScript : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI timerText;
 
-    public float timeLeft = 120.0f;  // The time in seconds that the timer will run for
+    public float timeLeft = 15.0f;  // The time in seconds that the timer will run for
     public bool isTimerRunning; // Indicates whether the timer is currently running
     private bool isTimerSoundPlaying = false;
 
@@ -19,7 +19,7 @@ public class TimerScript : MonoBehaviour
             timeLeft -= Time.deltaTime;  // Decrement the time left by the amount of time that has passed since the last frame
             timerText.text = Mathf.Round(timeLeft).ToString();  // Update the text to show the time left
 
-            if (timeLeft <= 10)
+            if (timeLeft <= 5)
             {
                 timerText.color = Color.red;
                 
