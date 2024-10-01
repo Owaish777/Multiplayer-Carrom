@@ -26,6 +26,8 @@ public class StrikerController : MonoBehaviour
 
     private void Start()
     {
+        //transform.position += new Vector3(0,Random.Range(0 , 4),0);
+
         playerTurn = true;
         isMoving = false;
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +36,9 @@ public class StrikerController : MonoBehaviour
     private void OnEnable()
     {
         // Reset the position of the striker when it is enabled
-        transform.position = new Vector3(strikerSlider.value, -4.57f, 0);
+        
+        //transform.position = new Vector3(strikerSlider.value, -4.57f, 0);
+        
         strikerForceField.LookAt(transform.position);
         strikerForceField.localScale = new Vector3(0, 0, 0);
         CollisionSoundManager.shouldBeStatic = true;
@@ -102,7 +106,8 @@ public class StrikerController : MonoBehaviour
 
         isMoving = false;
         playerTurn = false;
-        gameObject.SetActive(false);
+        
+        //gameObject.SetActive(false);
     }
 
     private void OnMouseDrag()
