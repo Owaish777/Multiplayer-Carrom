@@ -35,6 +35,7 @@ public class StrikerController : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("p;ayer");
         // Reset the position of the striker when it is enabled
         
         //transform.position = new Vector3(strikerSlider.value, -4.57f, 0);
@@ -56,6 +57,7 @@ public class StrikerController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log(transform.position);
         // If the striker is moving, disable charging and return
         if (rb.velocity.magnitude > 0.1f)
         {
